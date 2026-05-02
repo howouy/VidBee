@@ -13,7 +13,7 @@ if (!(forceDesktopPostinstall || isDesktopInstall)) {
   process.exit(0)
 }
 
-execSync('node scripts/setup-dev-binaries.js', {
+execSync('node --experimental-detect-module scripts/setup-dev-binaries.js', {
   cwd: desktopRoot,
   stdio: 'inherit'
 })
